@@ -24,7 +24,7 @@ for zfile in zfiles:
     with ZipFile(zfile) as zf:
         csvfiles = zf.namelist()
         for csv in csvfiles:
-            fname_out = (save_path / csv)
+            fname_out = save_path / csv
             
             if args.unzip and (not fname_out.exists()):
                 shutil.unpack_archive (data_path, save_path)
