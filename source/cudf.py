@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-#import cudf
+import cudf
 
 N = 20000000
 MERGE_N = 1000000
