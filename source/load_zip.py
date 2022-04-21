@@ -45,3 +45,4 @@ def preprocess(r, inplace=True):
 # %%
 # dtypeを指定した方がメモリは小さくなる、早くはならない
 # ddf = dd.read_csu(fname_out, dtype="object", encoding='cp932')
+# TODO
