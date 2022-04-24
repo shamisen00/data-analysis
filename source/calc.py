@@ -59,3 +59,42 @@ cp_img = cp.asarray(np_img)#numpy配列 ⇒ cupy配列に変換
 # %%
 %timeit cp_fimg = cp.fft.fft2(cp_img)
 # %%
+def sample_func_2():
+    index_list = []
+    for i in range(2000000):
+        index_list.append(i)
+
+
+def sample_func_3():
+    index_list = []
+    for i in range(6000000):
+        index_list.append(i)
+
+def sample_func_4():
+    sample_func_2()
+    sample_func_3()
+# %%
+%%prun
+sample_func_4()
+# %%
+import line_profiler
+
+
+def sample_func():
+    index_list = []
+
+    for i in range(1000000):
+        index_list.append(i)
+
+    for i in range(3000000):
+        index_list.append(i)
+
+    for i in range(10000000):
+        index_list.append(i)
+
+
+profiler = line_profiler.LineProfiler()
+profiler.add_function(sample_func)
+_ = profiler.runcall(sample_func)
+profiler.print_stats()
+# %%
