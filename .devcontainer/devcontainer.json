@@ -1,18 +1,22 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.209.6/containers/ubuntu
 {
-	"name": "Cpp dev",
+	"name": "data_processing",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "dev",
 	"workspaceFolder": "/workspace",
 	
 	"extensions": [
-		"GitHub.copilot",
-		"eamodio.gitlens",
-		"mhutchie.git-graph",
-		"ms-vsliveshare.vsliveshare",
-		"ms-toolsai.jupyter",
 		"ms-python.python",
+		"ms-toolsai.jupyter",
+		"eamtchie.git-graph",
+		"Gitodio.gitlens",
+		"mhuHub.copilot",
+		"gua.rainbow-brackets",
+		"MS-vsliveshare.vsliveshare-pack",
+		"yzhang.markdown-all-in-one",
+		"ms-vscode-remote.remote-containers",
+		"CodeStream.codestream",
 		"GitHub.github-vscode-theme",
 		"Gruntfuggly.todo-tree",
 		"hediet.vscode-drawio"
